@@ -1,7 +1,8 @@
 FROM node
 
-COPY package.json /app/package.json
-
-RUN cd /app && npm i
+RUN cd /app 
+COPY package*.json ./
+RUN npm config set registry http://registry.npmjs.org/ 
+RUN npm i
 
 WORKDIR /app

@@ -1,7 +1,7 @@
 FROM node
 
-WORKDIR /app
+COPY package.json /app/package.json
 
-RUN cd /app
-COPY package*.json ./
-RUN npm i
+RUN cd /app && npm i
+
+WORKDIR /app

@@ -1,7 +1,6 @@
 FROM node
 WORKDIR /app
-COPY package*.json /app
-RUN npm config set registry http://registry.npmjs.org/ 
+ADD package.json /app/package.json
 RUN ls /app
-RUN npm cache clear --force
+RUN npm cache clear
 RUN npm i

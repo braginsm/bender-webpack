@@ -3,5 +3,5 @@ FROM node
 WORKDIR /app
 
 RUN cd /app
-COPY ./package*.json ./
+COPY package*.json ./
 RUN npm i
